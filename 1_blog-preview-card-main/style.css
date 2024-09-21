@@ -1,6 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
 }
 :root{
     /* Color */
@@ -9,18 +12,35 @@
     --gray-500: #6B6B6B;
     --white: #FFFFFF;
 
-    --spacing-1: 16px;
-    --spacing-2: 24px;
-    --spacing-3: 40px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
 }
 
-body{
-    font-size: 14px;
+.preset-1{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-family: "Figtree-ExtraBold", sans-serif;
+    font-weight: bolder;    
 }
 
-.text-1{
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    font-family: "Figtree", sans-serif;
+.preset-2{
+    font-size: clamp(1rem, 1.4vw, 1.5rem);
+    font-family: "FigFigtree-SemiBold", sans-serif;
+    color: var(--gray-500);      
+}
+
+.preset-3{
+    font-size: 1rem;
+    font-family: "Figtree-SemiBold", sans-serif;
+}
+
+.preset-4{  
+    font-size: 1rem;
+    font-family: "Figtree-ExtraBold", sans-serif;
+    font-weight: bold;
 }
 
 img{
@@ -38,7 +58,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     background-color: var(--primary);
     font-size: x-large;
@@ -48,20 +68,36 @@ img{
 
 .card{
     border-radius: 20px;
-    padding: var(--spacing-1);
-    padding-bottom: var(--spacing-3);
+    padding: var(--spacing-6);
     background-color: var(--white);
-    text-align: center;
-    width: min-content;
-    height: min-content;
+    text-align: left;
+    max-width: 384px;
+    min-width: 327px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--gray-950);
+    box-shadow: 8px 8px 0px 0px var(--gray-950);
+}
+
+.card_tag{
+    background-color: var(--primary);
+    padding: var(--spacing-1) var(--spacing-4);
+    margin-bottom: var(--spacing-3);
+    border-radius: 4px;
+}
+
+.card_date{
+    margin: var(--spacing-3) 0 ;
 }
 
 .card_image{
-    border-radius: 10px;
-    height: 288px;
-    width: 288px;
     background-image: url('./images/image-qr-code.png');
     background-size: contain;
+    padding-bottom: var(--spacing-6);
+}
+
+.card_image img{
+    border-radius: 10px;
 }
 
 .card_details{
@@ -69,11 +105,20 @@ img{
     margin-right: var(--spacing-1);
 }
 .card_title{
-    margin-top: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
 }
 
-.card_desc{
-    margin-top: var(--spacing-1);
+.card_text{
+    margin-bottom: var(--spacing-6);
+}
+
+.card_author{
+    display: flex;
+    align-items: center;
+}   
+.card_author img{
+    width: 3em;
+    padding-right: var(--spacing-3);
 }
 
 .bkg-pink {
