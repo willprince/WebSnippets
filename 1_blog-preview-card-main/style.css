@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* Color */
+    --primary: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --white: #FFFFFF;
+
+    --spacing-1: 16px;
+    --spacing-2: 24px;
+    --spacing-3: 40px;
+}
+
+body{
+    font-size: 14px;
+}
+
+.text-1{
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family: "Figtree", sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Layout */
+
+
+.single-card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+    background-color: var(--primary);
+    font-size: x-large;
+    position: relative;
+
+}
+
+.card{
+    border-radius: 20px;
+    padding: var(--spacing-1);
+    padding-bottom: var(--spacing-3);
+    background-color: var(--white);
+    text-align: center;
+    width: min-content;
+    height: min-content;
+}
+
+.card_image{
+    border-radius: 10px;
+    height: 288px;
+    width: 288px;
+    background-image: url('./images/image-qr-code.png');
+    background-size: contain;
+}
+
+.card_details{
+    margin-left: var(--spacing-1);
+    margin-right: var(--spacing-1);
+}
+.card_title{
+    margin-top: var(--spacing-2);
+}
+
+.card_desc{
+    margin-top: var(--spacing-1);
+}
+
+.bkg-pink {
+background-color: pink;
+}
+
+.absolute-top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.attribution { margin-top: 1vh;font-size: 11px; text-align: center; height: 5vh;}
+.attribution a { color: hsl(228, 45%, 44%); }
